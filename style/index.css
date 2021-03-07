@@ -1,0 +1,14 @@
+*{
+  margin: 0px;
+  padding: 0px;
+
+}
+
+
+#sunImage.hidden{
+  display: none;
+}
+
+#moonImage.hidden{
+  display: none;
+}
