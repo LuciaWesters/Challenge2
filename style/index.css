@@ -1,9 +1,107 @@
-*{
-  margin: 0px;
-  padding: 0px;
+ @import url("https://use.typekit.net/brf3zbn.css");
 
+*{
+  text-transform: uppercase;
+  color: white;
+  text-align: center;
+  font-family: "brandon-grotesque";
 }
 
+body{
+  box-sizing: border-box;
+  margin: 0px;
+  padding: 0px;
+}
+
+#achtergrond{
+  background-color: #00004d;
+  animation: mymove 3s;
+}
+
+@keyframes mymove {
+  from {background-color: #5bb4cf;}
+  to {background-color: #00004d;}
+}
+
+#achtergrond.licht{
+  background-color: #5bb4cf;
+  animation: mysecondmove 3s;
+}
+
+@keyframes mysecondmove {
+  from {background-color: #00004d;}
+  to {background-color: #5bb4cf;}
+}
+
+
+/**header**/
+
+header{
+  overflow: hidden;
+}
+
+.logo img{
+  width: 200px;
+  margin-top: 20px;
+  margin-bottom: 80px;
+  padding-left: 50px;
+}
+
+/**main**/
+
+main{
+  margin-left: 8%;
+  margin-right: 8%;
+  display: grid;
+}
+
+/**klok**/
+
+.clock{
+  font-size: 60px;
+  text-shadow: 5px 5px 3px #0059b3;
+}
+
+/**animatie**/
+
+.animatie{
+  width: 100%;
+  height: 250px;
+  display: flex;
+  justify-self: center;
+  position: relative;
+}
+
+.landscape{
+  width: 100%;
+  align-self: flex-end;
+  position: absolute;
+}
+
+#sunImage{
+  position: absolute;
+  width: 80px;
+  top: 60px;
+  left: 40px;
+  animation: 3s pulsate alternate ease-in-out;
+}
+
+#moonImage{
+  position: absolute;
+  width: 80px;
+  top: 60px;
+  right: 40px;
+  animation: 3s pulsate alternate ease-in-out;
+}
+
+@keyframes pulsate {
+  0% {
+  	top: 100px;
+  }
+  100% {
+  	top: 60px;
+  }
+}
 
 #sunImage.hidden{
   display: none;
@@ -11,4 +109,140 @@
 
 #moonImage.hidden{
   display: none;
+}
+
+
+/*** media query 1: tablet ***/
+
+@media only screen and (min-width: 720px) and (max-width: 1023px){
+  .logo img{
+    width: 280px;
+    margin-top: 50px;
+    margin-bottom: 120px;
+    padding-left: 50px;
+  }
+
+  h1{
+    font-size: 40px;
+  }
+
+  .clock{
+    font-size: 100px;
+  }
+
+  .animatie{
+    width: 100%;
+    height: 400px;
+  }
+
+  #sunImage{
+    width: 120px;
+    top: 80px;
+    left: 100px;
+  }
+
+  #moonImage{
+    width: 120px;
+    top: 80px;
+    right: 100px;
+  }
+
+  @keyframes pulsate {
+    0% {
+    	top: 150px;
+    }
+    100% {
+    	top: 80px;
+    }
+  }
+}
+
+/*** media query 2: desktop klein ***/
+
+@media only screen and (min-width: 1024px) and (max-width: 1919px){
+  .logo img{
+    width: 250px;
+    margin-top: 40px;
+    margin-bottom: 70px;
+    padding-left: 60px;
+  }
+
+  h1{
+    font-size: 30px;
+  }
+
+  .clock{
+    font-size: 80px;
+  }
+
+  .animatie{
+    width: 100%;
+    height: 400px;
+  }
+
+  #sunImage{
+    width: 120px;
+    top: 10px;
+    left: 120px;
+  }
+
+  #moonImage{
+    width: 120px;
+    top: 10px;
+    right: 120px;
+  }
+
+  @keyframes pulsate {
+    0% {
+    	top: 60px;
+    }
+    100% {
+    	top: 10px;
+    }
+  }
+}
+
+/*** media query 3: desktop groot ***/
+
+@media only screen and (min-width: 1920px){
+  .logo img{
+    width: 400px;
+    margin-top: 50px;
+    margin-bottom: 100px;
+    padding-left: 80px;
+  }
+
+  h1{
+    font-size: 45px;
+  }
+
+  .clock{
+    font-size: 120px;
+  }
+
+  .animatie{
+    width: 100%;
+    height: 600px;
+  }
+
+  #sunImage{
+    width: 180px;
+    top: 20px;
+    left: 200px;
+  }
+
+  #moonImage{
+    width: 180px;
+    top: 20px;
+    right: 200px;
+  }
+
+  @keyframes pulsate {
+    0% {
+    	top: 80px;
+    }
+    100% {
+    	top: 20px;
+    }
+  }
 }

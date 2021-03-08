@@ -5,24 +5,24 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>SpaceX time</title>
     <link href="style/index.css" type="text/css" rel="stylesheet" />
+    <script src="scripts/tijd.js" type="text/javascript" defer></script>
     <script src="scripts/animatie.js" type="text/javascript" defer></script>
   </head>
-  <body>
+  <body id="achtergrond" onload="clockTime();">
     <header>
       <div class="logo">
         <img src="images/logo.png" alt="SpaceX" />
       </div>
     </header>
     <main class="grid-container">
-      <h1 id="test">De tijd is:</h1>
-      <div class="tijd">
-        <p>hier komt de tijd</p>
-      </div>
+      <h1>De tijd is:</h1>
+      <div id="clock" class="clock"></div>
       <div class="animatie">
-        <p>hier komt de animatie</p>
         <img src="images/sun.png" alt="sun" id="sunImage" class="zon" />
         <img src="images/moon.png" alt="moon" id="moonImage" class="moon" />
+        <img src="images/landscape.png" alt="landscape" class="landscape" />
       </div>
+
 
     </main>
   </body>
