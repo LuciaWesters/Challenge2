@@ -23,6 +23,16 @@ body{
   to {background-color: #00004d;}
 }
 
+#achtergrond.ochtend{
+  background-color: #83a0c9;
+  animation: mymorningmove 3s;
+}
+
+@keyframes mymorningmove{
+  from {background-color: #00004d;}
+  to {background-color: #83a0c9;}
+}
+
 #achtergrond.licht{
   background-color: #5bb4cf;
   animation: mysecondmove 3s;
@@ -32,6 +42,17 @@ body{
   from {background-color: #00004d;}
   to {background-color: #5bb4cf;}
 }
+
+#achtergrond.avond{
+  background-color: #e37b19;
+  animation: myavondmove 3s;
+}
+
+@keyframes myavondmove {
+  from {background-color: #00004d;}
+  to {background-color: #e37b19;}
+}
+
 
 
 /**header**/
